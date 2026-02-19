@@ -5,8 +5,10 @@ import Footer from '@/components/Footer';
 
 const packages = [
   {
-    name: '베이직 패키지',
-    price: '3,000,000',
+    name: '베이직',
+    nameEn: 'Basic',
+    price: '300',
+    unit: '만원~',
     desc: '합리적인 비용으로 알찬 웨딩 준비',
     features: [
       '웨딩홀 추천 및 예약 대행',
@@ -16,13 +18,14 @@ const packages = [
       '청첩장 제작',
       '웨딩 당일 코디네이션',
     ],
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop',
     popular: false,
   },
   {
-    name: '프리미엄 패키지',
-    price: '5,000,000',
-    desc: '인기 No.1, 완벽한 밸런스의 웨딩',
+    name: '프리미엄',
+    nameEn: 'Premium',
+    price: '500',
+    unit: '만원~',
+    desc: '가장 인기 있는 완벽 밸런스 패키지',
     features: [
       '베이직 패키지 전체 포함',
       '웨딩홀 3곳 비교 투어',
@@ -33,12 +36,13 @@ const packages = [
       '하객 관리 서비스',
       '전담 플래너 배정',
     ],
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop',
     popular: true,
   },
   {
-    name: '럭셔리 패키지',
-    price: '8,000,000',
+    name: '럭셔리',
+    nameEn: 'Luxury',
+    price: '800',
+    unit: '만원~',
     desc: '프리미엄 웨딩의 모든 것',
     features: [
       '프리미엄 패키지 전체 포함',
@@ -50,31 +54,34 @@ const packages = [
       '허니문 플래닝',
       '웨딩 전 과정 VIP 케어',
     ],
-    image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&h=400&fit=crop',
     popular: false,
   },
 ];
 
 const individualServices = [
   {
-    title: '웨딩홀',
-    desc: '호텔, 하우스웨딩, 야외웨딩 등 다양한 스타일의 웨딩홀을 엄선하여 추천합니다. 직접 방문 투어로 최적의 장소를 찾아드립니다.',
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop',
+    title: '웨딩홀 컨설팅',
+    subtitle: 'Wedding Venue',
+    desc: '호텔, 하우스웨딩, 야외웨딩 등 다양한 스타일의 웨딩홀을 엄선하여 추천합니다. 직접 방문 투어를 통해 분위기와 서비스를 꼼꼼히 비교하고, 커플에게 최적의 장소를 찾아드립니다.',
+    image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=600&fit=crop&q=80',
   },
   {
-    title: '드레스',
-    desc: '국내외 유명 디자이너 드레스부터 합리적인 렌탈 드레스까지. 체형과 스타일에 맞는 완벽한 드레스를 찾아드립니다.',
-    image: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&h=800&fit=crop',
+    title: '드레스 & 턱시도',
+    subtitle: 'Dress & Tuxedo',
+    desc: '국내외 유명 디자이너 드레스부터 합리적인 렌탈 드레스까지. 체형과 피부톤, 웨딩 컨셉에 맞는 완벽한 웨딩룩을 스타일링합니다.',
+    image: 'https://images.unsplash.com/photo-1594463750939-ebb28c3f7f75?w=800&h=600&fit=crop&q=80',
   },
   {
-    title: '스튜디오',
-    desc: '감성적인 웨딩 화보부터 자연스러운 스냅 촬영까지. 최고의 포토그래퍼와 함께 아름다운 추억을 남겨보세요.',
-    image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&h=400&fit=crop',
+    title: '웨딩 촬영',
+    subtitle: 'Photography',
+    desc: '감성적인 웨딩 화보부터 자연스러운 스냅 촬영까지. 유명 포토그래퍼와 함께 평생 간직할 아름다운 추억을 만들어 드립니다.',
+    image: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&h=600&fit=crop&q=80',
   },
   {
-    title: '허니문',
-    desc: '발리, 몰디브, 유럽 등 인기 허니문 여행지부터 이색적인 신혼여행까지. 맞춤 허니문 플랜을 제안합니다.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
+    title: '허니문 플래닝',
+    subtitle: 'Honeymoon',
+    desc: '발리, 몰디브, 유럽 등 인기 허니문 여행지부터 이색적인 신혼여행까지. 두 분의 취향에 맞는 맞춤 허니문 플랜을 제안합니다.',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop&q=80',
   },
 ];
 
@@ -83,59 +90,62 @@ export default function ServicesPage() {
     <>
       <Header />
 
-      <main className="pt-16 md:pt-20">
-        {/* Hero */}
-        <section className="section bg-blush">
-          <div className="container-custom text-center">
-            <p className="text-rosegold text-sm tracking-widest uppercase mb-3">Services</p>
-            <h1 className="font-serif text-3xl md:text-5xl text-dark mb-6">
-              웨딩 서비스
-            </h1>
-            <p className="text-dark/60 max-w-2xl mx-auto">
-              블라썸 웨딩의 전문 플래너가 결혼 준비의 모든 과정을 함께합니다.
-            </p>
+      <main>
+        {/* Hero Banner */}
+        <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1920&h=800&fit=crop&q=80"
+            alt="웨딩 서비스"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10 text-center text-white px-4">
+            <p className="text-champagne-light text-xs tracking-[0.3em] uppercase mb-4">Services</p>
+            <h1 className="font-serif text-3xl md:text-5xl tracking-wide">웨딩 서비스</h1>
+            <div className="w-12 h-px bg-champagne mx-auto mt-6" />
           </div>
         </section>
 
         {/* Packages */}
-        <section className="section bg-white">
+        <section className="section bg-ivory">
           <div className="container-custom">
-            <div className="text-center mb-12">
-              <p className="text-rosegold text-sm tracking-widest uppercase mb-3">Packages</p>
-              <h2 className="font-serif text-2xl md:text-4xl text-dark">
-                웨딩 패키지
-              </h2>
+            <div className="text-center mb-14">
+              <p className="section-label">Packages</p>
+              <h2 className="section-title">웨딩 패키지</h2>
+              <div className="divider-gold" />
+              <p className="text-warm-400 mt-4 max-w-md mx-auto text-sm">
+                커플의 예산과 니즈에 맞는 다양한 패키지를 준비했습니다.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
               {packages.map((pkg) => (
                 <div
                   key={pkg.name}
-                  className={`rounded-2xl overflow-hidden border ${
-                    pkg.popular ? 'border-rosegold shadow-lg scale-[1.02]' : 'border-gray-100 shadow-sm'
-                  } relative`}
+                  className={`rounded-sm overflow-hidden bg-white relative transition-shadow ${
+                    pkg.popular ? 'shadow-lg ring-1 ring-champagne' : 'shadow-sm hover:shadow-md'
+                  }`}
                 >
                   {pkg.popular && (
-                    <div className="absolute top-4 right-4 z-10 bg-rosegold text-white text-xs px-3 py-1 rounded-full">
-                      인기
+                    <div className="absolute top-0 left-0 right-0 bg-champagne text-white text-center text-xs py-2 tracking-wider uppercase z-10">
+                      Most Popular
                     </div>
                   )}
-                  <div className="relative h-48">
-                    <Image src={pkg.image} alt={pkg.name} fill className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute bottom-4 left-6 text-white">
-                      <h3 className="font-serif text-xl">{pkg.name}</h3>
-                      <p className="text-white/80 text-sm">{pkg.desc}</p>
+                  <div className={`p-8 ${pkg.popular ? 'pt-12' : ''}`}>
+                    <div className="text-center mb-6">
+                      <p className="text-warm-400 text-xs tracking-[0.2em] uppercase mb-1">{pkg.nameEn}</p>
+                      <h3 className="font-serif text-2xl text-warm-800 mb-2">{pkg.name}</h3>
+                      <p className="text-warm-400 text-sm">{pkg.desc}</p>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-center mb-6">
-                      <span className="font-serif text-3xl text-rosegold">{pkg.price}</span>
-                      <span className="text-dark/40 text-sm">원~</span>
-                    </p>
-                    <ul className="space-y-3 mb-8">
+                    <div className="text-center py-6 border-y border-warm-100">
+                      <span className="font-serif text-4xl text-champagne">{pkg.price}</span>
+                      <span className="text-warm-400 text-sm ml-1">{pkg.unit}</span>
+                    </div>
+                    <ul className="space-y-3 mt-6 mb-8">
                       {pkg.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2 text-sm text-dark/60">
-                          <svg className="w-4 h-4 text-rosegold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <li key={feature} className="flex items-start gap-3 text-sm text-warm-500">
+                          <svg className="w-4 h-4 text-champagne mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           {feature}
@@ -144,10 +154,10 @@ export default function ServicesPage() {
                     </ul>
                     <Link
                       href="/contact"
-                      className={`block text-center py-3 rounded-lg font-medium transition-colors ${
+                      className={`block text-center py-3.5 text-sm tracking-wide transition-all duration-300 ${
                         pkg.popular
-                          ? 'bg-rosegold text-white hover:bg-rosegold-dark'
-                          : 'border border-rosegold text-rosegold hover:bg-rosegold hover:text-white'
+                          ? 'bg-champagne text-white hover:bg-champagne-dark'
+                          : 'border border-champagne text-champagne hover:bg-champagne hover:text-white'
                       }`}
                     >
                       상담 신청
@@ -160,32 +170,31 @@ export default function ServicesPage() {
         </section>
 
         {/* Individual Services */}
-        <section className="section bg-cream">
+        <section className="section bg-warm-50">
           <div className="container-custom">
-            <div className="text-center mb-12">
-              <p className="text-rosegold text-sm tracking-widest uppercase mb-3">Individual Services</p>
-              <h2 className="font-serif text-2xl md:text-4xl text-dark">
-                개별 서비스
-              </h2>
-              <p className="text-dark/50 mt-4 max-w-lg mx-auto">
+            <div className="text-center mb-14">
+              <p className="section-label">Individual Services</p>
+              <h2 className="section-title">개별 서비스</h2>
+              <div className="divider-gold" />
+              <p className="text-warm-400 mt-4 max-w-md mx-auto text-sm">
                 필요한 서비스만 선택하여 이용하실 수도 있습니다.
               </p>
             </div>
-            <div className="space-y-12">
+            <div className="space-y-16">
               {individualServices.map((service, index) => (
                 <div
                   key={service.title}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
-                    index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                  }`}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center`}
                 >
-                  <div className={`relative h-64 md:h-80 rounded-2xl overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <div className={`relative h-64 md:h-80 rounded-sm overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                     <Image src={service.image} alt={service.title} fill className="object-cover" />
                   </div>
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <h3 className="font-serif text-2xl md:text-3xl text-dark mb-4">{service.title}</h3>
-                    <p className="text-dark/60 leading-relaxed mb-6">{service.desc}</p>
-                    <Link href="/contact" className="btn-primary">
+                    <p className="text-champagne text-xs tracking-[0.2em] uppercase mb-2">{service.subtitle}</p>
+                    <h3 className="font-serif text-2xl md:text-3xl text-warm-800 mb-4">{service.title}</h3>
+                    <div className="w-8 h-px bg-champagne mb-5" />
+                    <p className="text-warm-500 leading-relaxed mb-6 text-sm">{service.desc}</p>
+                    <Link href="/contact" className="btn-primary text-sm">
                       상담 문의
                     </Link>
                   </div>
@@ -196,17 +205,25 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="section bg-rosegold text-white">
-          <div className="container-custom text-center">
-            <h2 className="font-serif text-2xl md:text-4xl mb-4">
+        <section className="relative py-20 md:py-28 overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1920&h=800&fit=crop&q=80"
+            alt="웨딩 부케"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 container-custom text-center text-white">
+            <h2 className="font-serif text-2xl md:text-4xl mb-4 tracking-wide">
               맞춤 상담을 받아보세요
             </h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">
+            <div className="w-12 h-px bg-champagne mx-auto my-6" />
+            <p className="text-white/70 mb-8 max-w-md mx-auto text-sm">
               어떤 서비스가 필요한지 잘 모르겠다면, 무료 상담을 통해 알아보세요.
             </p>
             <Link
               href="/contact"
-              className="inline-block px-10 py-4 bg-white text-rosegold font-medium rounded-lg hover:bg-cream transition-colors"
+              className="inline-block px-10 py-4 bg-champagne text-white text-sm tracking-widest uppercase hover:bg-champagne-dark transition-all duration-300"
             >
               무료 상담 예약
             </Link>

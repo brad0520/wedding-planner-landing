@@ -9,24 +9,42 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        rosegold: {
-          DEFAULT: "#B76E79",
-          light: "#D4A0A7",
-          dark: "#9A5560",
-        },
-        cream: {
-          DEFAULT: "#FFFDD0",
-          dark: "#F5F0B0",
+        ivory: "#FFFFF0",
+        champagne: {
+          DEFAULT: "#C9A96E",
+          light: "#D4BC8E",
+          dark: "#B08D4F",
         },
         blush: {
-          DEFAULT: "#F8E8E0",
-          dark: "#F0D0C0",
+          DEFAULT: "#F5E6E0",
+          light: "#FDF2EF",
+          dark: "#EBCFC5",
         },
-        dark: "#2D2D2D",
+        warm: {
+          50: "#FBF9F7",
+          100: "#F5F0EB",
+          200: "#EDE4DB",
+          300: "#DFD0C1",
+          400: "#C4AA8D",
+          500: "#A68A6B",
+          600: "#8B7052",
+          700: "#6E583F",
+          800: "#4A3B2A",
+          900: "#2C2318",
+        },
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],
+        serif: [
+          "var(--font-playfair)",
+          "Playfair Display",
+          "Georgia",
+          "serif",
+        ],
         sans: ["Pretendard", "system-ui", "sans-serif"],
+      },
+      backgroundImage: {
+        "gradient-elegant":
+          "linear-gradient(135deg, #FFFFF0 0%, #F5E6E0 50%, #FFFFF0 100%)",
       },
     },
   },

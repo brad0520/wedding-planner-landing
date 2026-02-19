@@ -8,28 +8,36 @@
   }
 
   body {
-    @apply antialiased font-sans text-dark;
+    @apply antialiased font-sans text-warm-800;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-rosegold text-white font-medium rounded-lg hover:bg-rosegold-dark transition-colors;
+    @apply px-6 py-3 bg-champagne text-white font-medium rounded-sm hover:bg-champagne-dark transition-all duration-300 tracking-wide;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border border-rosegold text-rosegold font-medium rounded-lg hover:bg-rosegold hover:text-white transition-colors;
+    @apply px-6 py-3 border border-champagne text-champagne font-medium rounded-sm hover:bg-champagne hover:text-white transition-all duration-300 tracking-wide;
   }
 
   .section {
-    @apply py-12 md:py-16 lg:py-24;
+    @apply py-16 md:py-20 lg:py-28;
   }
 
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .heading-serif {
-    @apply font-serif;
+  .section-label {
+    @apply text-champagne text-xs md:text-sm tracking-[0.25em] uppercase mb-3 font-medium;
+  }
+
+  .section-title {
+    @apply font-serif text-2xl md:text-3xl lg:text-4xl text-warm-800 leading-snug;
+  }
+
+  .divider-gold {
+    @apply w-12 h-px bg-champagne mx-auto my-6;
   }
 }

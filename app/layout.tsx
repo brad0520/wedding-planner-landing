@@ -11,13 +11,16 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "블라썸 웨딩 | 당신의 완벽한 웨딩을 설계합니다",
   description:
-    "블라썸 웨딩 플래너와 함께 잊을 수 없는 웨딩을 만드세요. 웨딩홀, 드레스, 스튜디오, 허니문까지 원스톱 서비스.",
+    "블라썸 웨딩 플래너와 함께 잊을 수 없는 웨딩을 만드세요. 웨딩홀, 드레스, 스튜디오, 허니문까지 원스톱 프리미엄 웨딩 서비스.",
   keywords: [
     "웨딩 플래너",
     "결혼 준비",
     "웨딩홀",
     "웨딩 드레스",
     "웨딩 촬영",
+    "허니문",
+    "프리미엄 웨딩",
+    "강남 웨딩",
   ],
   openGraph: {
     type: "website",
@@ -25,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "블라썸 웨딩",
     title: "블라썸 웨딩 | 당신의 완벽한 웨딩을 설계합니다",
     description:
-      "블라썸 웨딩 플래너와 함께 잊을 수 없는 웨딩을 만드세요. 웨딩홀, 드레스, 스튜디오, 허니문까지 원스톱 서비스.",
+      "블라썸 웨딩 플래너와 함께 잊을 수 없는 웨딩을 만드세요. 웨딩홀, 드레스, 스튜디오, 허니문까지 원스톱 프리미엄 웨딩 서비스.",
     images: [
       {
         url: "/og-image.jpg",
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "블라썸 웨딩 | 당신의 완벽한 웨딩을 설계합니다",
     description:
-      "블라썸 웨딩 플래너와 함께 잊을 수 없는 웨딩을 만드세요. 웨딩홀, 드레스, 스튜디오, 허니문까지 원스톱 서비스.",
+      "블라썸 웨딩 플래너와 함께 잊을 수 없는 웨딩을 만드세요. 웨딩홀, 드레스, 스튜디오, 허니문까지 원스톱 프리미엄 웨딩 서비스.",
     images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -52,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={playfair.variable}>
-      <body className="min-h-screen bg-white text-dark">{children}</body>
+      <body className="min-h-screen bg-ivory text-warm-800">{children}</body>
     </html>
   );
 }
